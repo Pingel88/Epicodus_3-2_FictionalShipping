@@ -22,7 +22,7 @@ namespace FictionalShipping.Models
 
     public int GetVolume()
     {
-      return 0;
+      return Length * Height * Width;
     }
   }
 }
