@@ -10,7 +10,7 @@ namespace FictionalShipping.Models
     {
       Length = length;
       Height = height;
-      Width = 0;
+      Width = width;
     }
   }
 }
