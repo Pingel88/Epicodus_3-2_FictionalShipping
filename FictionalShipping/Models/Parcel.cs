@@ -6,7 +6,7 @@ namespace FictionalShipping.Models
 
     public Parcel(int length)
     {
-      Length = 0;
+      Length = length;
     }
   }
 }
