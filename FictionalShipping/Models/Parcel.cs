@@ -17,7 +17,7 @@ namespace FictionalShipping.Models
     public Parcel(int length, int height, int width, int weight)
       : this (length, height, width)
     {
-      Weight = 0;
+      Weight = weight;
     }
   }
 }
