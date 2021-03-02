@@ -12,5 +12,14 @@ namespace FictionalShipping.Tests
       Parcel newParcel = new Parcel();
       Assert.AreEqual(typeof(Parcel), newParcel.GetType());
     }
+
+    [TestMethod]
+    public void GetLength_ReturnsParcelLength_Int()
+    {
+      int length = 6;
+      Parcel newParcel = new Parcel(length);
+      int result = newParcel.Length;
+      Asset.AreEqual(length, result);
+    }
   }
 }
