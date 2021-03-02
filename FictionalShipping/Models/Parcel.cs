@@ -2,9 +2,11 @@ namespace FictionalShipping.Models
 {
   public class Parcel
   {
-    public Parcel()
-    {
+    public int Length { get; set; }
 
+    public Parcel(int length)
+    {
+      Length = 0;
     }
   }
 }

@@ -9,7 +9,7 @@ namespace FictionalShipping.Tests
     [TestMethod]
     public void ParcelConstructor_CreatesInstanceOfParcel_Parcel()
     {
-      Parcel newParcel = new Parcel();
+      Parcel newParcel = new Parcel(0);
       Assert.AreEqual(typeof(Parcel), newParcel.GetType());
     }
 
@@ -19,7 +19,7 @@ namespace FictionalShipping.Tests
       int length = 6;
       Parcel newParcel = new Parcel(length);
       int result = newParcel.Length;
-      Asset.AreEqual(length, result);
+      Assert.AreEqual(length, result);
     }
   }
 }
