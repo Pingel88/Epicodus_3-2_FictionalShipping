@@ -39,5 +39,13 @@ namespace FictionalShipping.Tests
       int result = newParcel.Width;
       Assert.AreEqual(width, result);
     }
+    [TestMethod]
+    public void GetWeight_ReturnsParcelWeight_Int()
+    {
+      int weight = 6;
+      Parcel newParcel = new Parcel(0, 0, 0, weight);
+      int result = newParcel.Weight;
+      Assert.AreEqual(weight, result);
+    }
   }
 }
