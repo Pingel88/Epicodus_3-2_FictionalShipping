@@ -1,17 +1,16 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProjectName;
+using FictionalShipping.Models;
 
-namespace ProjectName.Tests
+namespace FictionalShipping.Tests
 {
   [TestClass]
-  public class ClassNameTests
+  public class ParcelTests
   {
     [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    public void ParcelConstructor_CreatesInstanceOfParcel_Parcel()
     {
-      // any necessary logic to prep for test; instantiating new classes, etc.
-      Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
-      // Assert.AreEqual(true, testLeapYear.IsLeapYear(2000));
+      Parcel newParcel = new Parcel();
+      Assert.AreEqual(typeof(Parcel), newParcel.GetType());
     }
   }
 }
