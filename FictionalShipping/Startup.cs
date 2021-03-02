@@ -13,7 +13,7 @@ namespace FictionalShipping
       var builder = new ConfigurationBuilder()
         .SetBasePath(env.ContentRootPath)
         .AddEnvironmentVariables();
-      Configuration = builder.build();
+      Configuration = builder.Build();
     }
 
     public IConfigurationRoot Configuration { get; }
