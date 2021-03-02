@@ -61,9 +61,9 @@ namespace FictionalShipping.Tests
     [TestMethod]
     public void GetPrice_ReturnsShippingPrice_Int()
     {
-      int price = 30;
+      double price = 11.64;
       Parcel newParcel = new Parcel(12, 12, 12, 6);
-      int result = newParcel.GetPrice();
+      double result = newParcel.GetPrice();
       Assert.AreEqual(price, result);
 
     }

@@ -1,3 +1,6 @@
+using System.Numerics;
+using System.Collections.Generic;
+
 namespace FictionalShipping.Models
 {
   public class Parcel
@@ -7,11 +10,19 @@ namespace FictionalShipping.Models
     public int Width { get; set; }
     public int Weight { get; set; }
 
+    private static List<Parcel> _parcels = new List<Parcel> {};
+
     public Parcel(int length, int height, int width)
     {
       Length = length;
       Height = height;
       Width = width;
+      _parcels.Add(this);
+    }
+
+    public static List<Parcel> GetAll()
+    {
+      return _parcels;
     }
 
     public Parcel(int length, int height, int width, int weight)
@@ -25,20 +36,24 @@ namespace FictionalShipping.Models
       return Length * Height * Width;
     }
 
-    public int GetPrice()
+    public double GetPrice()
     {
       int volume = this.GetVolume();
-      if (volume <= 1728)
+      if (volume <= 100)
       {
-        return this.Weight * 5;
+        return volume * 0.2 + this.Weight;
       }
-      else if (volume <= 13824)
+      else if (volume <= 10000)
       {
-        return this.Weight * 7;
+        return volume * 0.005 + this.Weight * 0.5;
       }
-      else
+      else if (volume <= 100000)
       {
-        return this.Weight * 10;   
+        return volume * 0.002 + this.Weight * 0.3;   
+      }
+      else 
+      {
+        return 0;
       }   
     }
   }
