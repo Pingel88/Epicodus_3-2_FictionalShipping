@@ -24,5 +24,15 @@ namespace FictionalShipping.Models
     {
       return Length * Height * Width;
     }
+
+    public int GetPrice()
+    {
+      int volume = this.GetVolume();
+      return 1;
+      
+          
+          
+      
+    }
   }
 }

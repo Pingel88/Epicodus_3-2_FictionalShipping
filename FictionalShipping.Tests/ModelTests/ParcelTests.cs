@@ -57,5 +57,15 @@ namespace FictionalShipping.Tests
       int result = newParcel.GetVolume();
       Assert.AreEqual(volume, result);
     }
+
+    [TestMethod]
+    public void GetPrice_ReturnsShippingPrice_Int()
+    {
+      int price = 0;
+      Parcel newParcel = new Parcel(3, 4, 5, 6);
+      int result = newParcel.GetPrice();
+      Assert.AreEqual(price, result);
+
+    }
   }
 }
