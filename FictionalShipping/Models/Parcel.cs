@@ -28,11 +28,18 @@ namespace FictionalShipping.Models
     public int GetPrice()
     {
       int volume = this.GetVolume();
-      return 1;
-      
-          
-          
-      
+      if (volume <= 1728)
+      {
+        return this.Weight * 5;
+      }
+      else if (volume <= 13824)
+      {
+        return this.Weight * 7;
+      }
+      else
+      {
+        return this.Weight * 10;   
+      }   
     }
   }
 }
