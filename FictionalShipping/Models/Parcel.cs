@@ -19,5 +19,10 @@ namespace FictionalShipping.Models
     {
       Weight = weight;
     }
+
+    public int GetVolume()
+    {
+      return 0;
+    }
   }
 }
