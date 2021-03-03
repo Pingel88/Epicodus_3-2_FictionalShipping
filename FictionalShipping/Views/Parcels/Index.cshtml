@@ -1,6 +1,6 @@
 @using FictionalShipping.Models;
 
-<h1>Parcles</h1>
+<h1>Parcels</h1>
 @if (Model.Count == 0)
 {
   <p>There are no parcels in this list.</p>
@@ -13,7 +13,7 @@
     <li>Parcel @count weight: @parcel.Weight lbs</li>
     if (parcel.GetPrice() != 0 && parcel.Weight < 800)
     {
-      <li>Parcel @count will cost $@parcel.GetPrice()</li>
+      <li>Parcel @count will cost $@string.Format("{0:0.00}", parcel.GetPrice())</li>
       count++;
     }
     else

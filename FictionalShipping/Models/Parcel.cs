@@ -1,4 +1,4 @@
-using System.Numerics;
+using System;
 using System.Collections.Generic;
 
 namespace FictionalShipping.Models
@@ -41,15 +41,15 @@ namespace FictionalShipping.Models
       int volume = this.GetVolume();
       if (volume <= 100)
       {
-        return volume * 0.2 + this.Weight;
+        return volume * 0.1 + this.Weight;
       }
       else if (volume <= 10000)
       {
-        return volume * 0.005 + this.Weight * 0.5;
+        return volume * 0.08 + this.Weight * 0.5;
       }
       else if (volume <= 100000)
       {
-        return volume * 0.002 + this.Weight * 0.3;   
+        return volume * 0.002 + this.Weight * 0.3;
       }
       else 
       {
